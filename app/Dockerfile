@@ -22,7 +22,9 @@ ENV NODE_ENV=production
 
 # Copy only package files, install ONLY production deps
 COPY package*.json ./
-RUN npm ci --omit=dev && npm cache clean --force
+RUN npm ci --omit=dev && \
+    npm cache clean --force && \
+    rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx
 
 # Copy application source from builder stage
 COPY --from=builder /app/src ./src
