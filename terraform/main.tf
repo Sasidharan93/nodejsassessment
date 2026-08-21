@@ -72,3 +72,11 @@ module "monitoring" {
   alert_email             = var.alert_email
   google_chat_webhook_url = var.google_chat_webhook_url
 }
+
+
+module "wif" {
+  source            = "./modules/wif"
+  project_id        = var.project_id
+  github_repo       = var.github_repo
+  deployer_sa_email = module.iam.deployer_sa_email
+}

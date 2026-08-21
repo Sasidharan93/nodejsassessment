@@ -25,3 +25,8 @@ variable "google_chat_webhook_url" {
   type        = string
   sensitive   = true
 }
+
+variable "github_repo" {
+  description = "GitHub repository in owner/repo format"
+  type        = string
+}

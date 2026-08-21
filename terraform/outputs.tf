@@ -25,3 +25,7 @@ output "cloud_run_url" {
 output "artifact_registry_url" {
   value = module.cloud_run.repository_url
 }
+
+output "workload_identity_provider" {
+  value = module.wif.workload_identity_provider
+}
