@@ -1,3 +1,13 @@
+terraform {
+  required_version = ">= 1.5.0"
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "~> 5.0"
+    }
+  }
+}
+
 # Dedicated service account for Cloud Run - no default compute SA usage
 resource "google_service_account" "cloud_run_sa" {
   project      = var.project_id

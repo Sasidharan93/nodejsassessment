@@ -1,3 +1,17 @@
+terraform {
+  required_version = ">= 1.5.0"
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "~> 5.0"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.6"
+    }
+  }
+}
+
 # Generates a strong random password - never hardcoded, never in git
 resource "random_password" "db_password" {
   length  = 20
