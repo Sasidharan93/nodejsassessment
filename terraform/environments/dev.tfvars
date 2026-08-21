@@ -1,0 +1,5 @@
+project_id              = "devops-assessment-nodejs"
+region                  = "asia-south1"
+app_name                = "nodejs-devsecops"
+alert_email             = "sassiedharan2012@gmail.com"
+google_chat_webhook_url = "https://chat.googleapis.com/v1/spaces/PLACEHOLDER/messages?key=PLACEHOLDER&token=PLACEHOLDER"
