@@ -57,7 +57,7 @@ jobs:
         run: npm audit --audit-level=high
 
       - name: Run Trivy filesystem scan (source code vulnerabilities)
-        uses: aquasecurity/trivy-action@0.24.0
+        uses: aquasecurity/trivy-action@0.28.0
         with:
           scan-type: 'fs'
           scan-ref: 'app'
@@ -77,7 +77,7 @@ jobs:
         run: docker build -t nodejs-api:ci-test ./app
 
       - name: Scan Docker image with Trivy
-        uses: aquasecurity/trivy-action@0.24.0
+        uses: aquasecurity/trivy-action@0.28.0
         with:
           image-ref: 'nodejs-api:ci-test'
           severity: 'CRITICAL,HIGH'
